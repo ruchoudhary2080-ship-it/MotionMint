@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RU CHOUDHARY | Portfolio</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+<style>
+
+/* ============================= */
+/* GLOBAL STYLES */
+/* ============================= */
+
+:root{
+    --bg:#0f0f0f;
+    --dark:#151515;
+    --green:#00ff88;
+    --lightgreen:#1aff9c;
+    --orange1:#ff6a00;
+    --orange2:#ff9d00;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:var(--bg);
+    color:#fff;
+    overflow-x:hidden;
+}
+
+section{
+    padding:80px 10%;
+    position:relative;
+}
+
+h1,h2,h3{
+    font-weight:800;
+}
+
+p{
+    color:#ccc;
+    line-height:1.6;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 30px;
+    border-radius:30px;
+    background:linear-gradient(45deg,var(--green),var(--lightgreen));
+    color:#000;
+    font-weight:600;
+    text-decoration:none;
+    transition:0.4s;
+    box-shadow:0 0 20px rgba(0,255,136,0.6);
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 0 35px rgba(0,255,136,0.9);
+}
+
+/* ============================= */
+/* NAVBAR */
+/* ============================= */
+
+nav{
+    position:fixed;
+    width:100%;
+    padding:20px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,0.6);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+nav .logo{
+    font-weight:700;
+    font-size:18px;
+    letter-spacing:2px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#fff;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:var(--green);
+}
+
+/* ============================= */
+/* HERO */
+/* ============================= */
+
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    min-height:100vh;
+}
+
+.badge{
+    display:inline-block;
+    padding:6px 16px;
+    background:rgba(0,255,136,0.1);
+    border:1px solid var(--green);
+    border-radius:20px;
+    color:var(--green);
+    font-size:12px;
+    letter-spacing:2px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:52px;
+    line-height:1.2;
+}
+
+.hero h1 span{
+    color:var(--green);
+}
+
+.hero img{
+    width:420px;
+    border-radius:20px;
+    box-shadow:0 20px 60px rgba(0,0,0,0.8);
+    transition:0.4s;
+}
+
+.hero img:hover{
+    transform:scale(1.05);
+}
+
+/* ============================= */
+/* ABOUT */
+/* ============================= */
+
+.about{
+    background:#151515;
+    display:flex;
+    gap:60px;
+    align-items:center;
+}
+
+.about img{
+    width:320px;
+    border-radius:20px;
+}
+
+.about h2{
+    margin-bottom:20px;
+}
+
+.highlight{
+    color:var(--green);
+}
+
+/* ============================= */
+/* SKILLS */
+/* ============================= */
+
+.skills{
+    text-align:center;
+}
+
+.skill-container{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+    margin-top:50px;
+}
+
+.skill{
+    width:150px;
+    height:150px;
+    position:relative;
+}
+
+.skill svg{
+    width:150px;
+    height:150px;
+    transform:rotate(-90deg);
+}
+
+.skill circle{
+    fill:none;
+    stroke-width:8;
+    stroke:#222;
+}
+
+.skill circle.progress{
+    stroke:var(--green);
+    stroke-dasharray:440;
+    stroke-dashoffset:440;
+    transition:2s ease;
+}
+
+.skill span{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-weight:600;
+}
+
+/* ============================= */
+/* SERVICES */
+/* ============================= */
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin-top:50px;
+}
+
+.card{
+    background:#151515;
+    padding:30px;
+    border-radius:20px;
+    transition:0.4s;
+    text-align:center;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 30px rgba(0,255,136,0.4);
+}
+
+/* ============================= */
+/* PORTFOLIO */
+/* ============================= */
+
+.portfolio-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.portfolio-card{
+    background:#151515;
+    padding:20px;
+    border-radius:20px;
+    transition:0.4s;
+}
+
+.portfolio-card:hover{
+    box-shadow:0 0 30px rgba(0,255,136,0.5);
+}
+
+/* ============================= */
+/* CONTACT */
+/* ============================= */
+
+.contact{
+    background:#151515;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+}
+
+input,textarea{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border-radius:10px;
+    border:none;
+    background:#222;
+    color:#fff;
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media(max-width:992px){
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+    .about{
+        flex-direction:column;
+    }
+    .services-grid,
+    .portfolio-grid{
+        grid-template-columns:1fr;
+    }
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="logo">Portfolio | RU CHOUDHARY</div>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div>
+        <div class="badge">VIDEO EDITOR | 3D ARTIST | VFX ARTIST</div>
+        <h1>
+            Crafting Impactful Visual Stories<br>
+            <span>Through Editing & Strategy</span>
+        </h1>
+        <p style="margin:20px 0;">Professional cinematic storytelling for brands & creators.</p>
+        <a href="#contact" class="btn">Let’s Work Together</a>
+    </div>
+    <img src="01.jpg" alt="Project Image">
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+    <img src="profile.jpg">
+    <div>
+        <h2>About Me</h2>
+        <p>
+        I am a <span class="highlight">fresher</span> with strong creative expertise in Video Editing, VFX & 3D Animation.
+        </p>
+        <p>
+        I have worked as a faculty for around <span class="highlight">2 years</span> teaching video editing & VFX.
+        </p>
+        <p>
+        My top skills include professional Video Editing, 3D, and cinematic VFX production.
+        </p>
+        <br>
+        <a href="#contact" class="btn">Hire Me</a>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section class="skills">
+    <h2>My Skills</h2>
+    <div class="skill-container">
+
+        <div class="skill">
+            <svg>
+                <circle cx="75" cy="75" r="70"></circle>
+                <circle cx="75" cy="75" r="70" class="progress" data-percent="100"></circle>
+            </svg>
+            <span>Premiere 100%</span>
+        </div>
+
+        <div class="skill">
+            <svg>
+                <circle cx="75" cy="75" r="70"></circle>
+                <circle cx="75" cy="75" r="70" class="progress" data-percent="100"></circle>
+            </svg>
+            <span>After Effects 100%</span>
+        </div>
+
+        <div class="skill">
+            <svg>
+                <circle cx="75" cy="75" r="70"></circle>
+                <circle cx="75" cy="75" r="70" class="progress" data-percent="88"></circle>
+            </svg>
+            <span>Color Grading 88%</span>
+        </div>
+
+        <div class="skill">
+            <svg>
+                <circle cx="75" cy="75" r="70"></circle>
+                <circle cx="75" cy="75" r="70" class="progress" data-percent="78"></circle>
+            </svg>
+            <span>YouTube 78%</span>
+        </div>
+
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+    <h2 style="text-align:center;">Services & Solutions</h2>
+    <div class="services-grid">
+        <div class="card">Post Production</div>
+        <div class="card">Motion Graphics</div>
+        <div class="card">YouTube Editing</div>
+        <div class="card">Social Media Edits</div>
+        <div class="card">Creative Storytelling</div>
+        <div class="card">Reels & Shorts</div>
+    </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+    <h2 style="text-align:center;">Portfolio</h2>
+    <div class="portfolio-grid">
+
+        <div class="portfolio-card">
+            <h3>Motion Graphics</h3>
+            <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+                <iframe src="https://drive.google.com/file/d/1jLDY95ccI56uJC0fMZs4KWuM3FGke-yS/preview"
+                style="position:absolute;top:0;left:0;width:100%;height:100%;" allowfullscreen></iframe>
+            </div>
+            <br>
+            <a href="https://drive.google.com/file/d/1jLDY95ccI56uJC0fMZs4KWuM3FGke-yS/view" target="_blank" class="btn">View Project</a>
+        </div>
+
+        <div class="portfolio-card">
+            <h3>VFX Project</h3>
+            <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+                <iframe src="https://drive.google.com/file/d/1AmipXysPyN_5lQeuxCEezeGlBeNPYrhv/preview"
+                style="position:absolute;top:0;left:0;width:100%;height:100%;" allowfullscreen></iframe>
+            </div>
+            <br>
+            <a href="https://drive.google.com/file/d/1AmipXysPyN_5lQeuxCEezeGlBeNPYrhv/view" target="_blank" class="btn">View Project</a>
+        </div>
+
+        <div class="portfolio-card">
+            <h3>Reel + Motion</h3>
+            <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+                <iframe src="https://drive.google.com/file/d/10kW0r_FkNhmkdzYhOhQoH-R3Xl9IVM9D/preview"
+                style="position:absolute;top:0;left:0;width:100%;height:100%;" allowfullscreen></iframe>
+            </div>
+            <br>
+            <a href="https://drive.google.com/file/d/10kW0r_FkNhmkdzYhOhQoH-R3Xl9IVM9D/view" target="_blank" class="btn">View Project</a>
+        </div>
+
+    </div>
+
+    <br><br>
+    <div style="text-align:center;">
+        <a href="https://drive.google.com/drive/folders/1DYvcuN6ARWmhjIW2px3dpLrWhrL48vsv?usp=sharing" 
+        target="_blank" class="btn">View Drive Link</a>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+    <h2 style="text-align:center;">Let’s Connect & Create Something Amazing</h2>
+    <div class="contact-grid">
+
+        <div>
+            <p><i class="fa fa-phone highlight"></i> 
+            <a href="tel:8239706564" style="color:#fff;">8239706564</a></p>
+
+            <p><i class="fa fa-envelope highlight"></i> 
+            <a href="mailto:ruchoudhary8293@gmail.com" style="color:#fff;">
+            ruchoudhary8293@gmail.com</a></p>
+        </div>
+
+        <div>
+            <form action="https://formsubmit.co/ruchoudhary8293@gmail.com" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="4" placeholder="Your Message"></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+
+    </div>
+</section>
+
+<script>
+
+/* SKILL ANIMATION */
+const circles=document.querySelectorAll('.progress');
+
+const observer=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            let percent=entry.target.getAttribute('data-percent');
+            let offset=440-(440*percent)/100;
+            entry.target.style.strokeDashoffset=offset;
+        }
+    });
+},{threshold:0.5});
+
+circles.forEach(circle=>observer.observe(circle));
+
+</script>
+
+</body>
+</html>
